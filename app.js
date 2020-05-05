@@ -5,8 +5,8 @@ var nodemailer = require('nodemailer');
 const exphbs = require('express-handlebars');
 var PORT = process.env.PORT || 3000;
 
-var http = require('http');
-var server = http.Server(app);
+
+
 
 
 var app = express();
@@ -74,7 +74,7 @@ app.post('/contact/send', function(req, res){
 });
   
 
-server.listen(PORT, function(){
+app.listen(PORT, function(){
 	console.log('global server runnig');
 });
 
