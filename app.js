@@ -3,7 +3,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 const exphbs = require('express-handlebars');
-var PORT = process.env.PORT || 3000;
 
 
 
@@ -74,7 +73,7 @@ app.post('/contact/send', function(req, res){
 });
   
 
-app.listen(PORT, function(){
+app.listen(process.env.PORT || 3000, function(){
 	console.log('global server runnig');
 });
 
